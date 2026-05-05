@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
     public Button englishButton, frenchButton, clearProgressButton;
+    public GameObject hintsCheckmark;
     public Material languageOn;
 
     void Start()
@@ -20,6 +21,7 @@ public class Settings : MonoBehaviour
             FrenchButtonClicked();
         }
 
+        hintsCheckmark.SetActive(PlayerPrefs.GetInt("hintsDisabled") == 0);
     }
 
     public void ClearProgressClicked()
@@ -29,6 +31,15 @@ public class Settings : MonoBehaviour
         {
             PlayerPrefs.SetInt("TutorialDone" + i, 0);
         }
+    }
+
+    public void ToggleHints()
+    {
+        bool newState = PlayerPrefs.GetInt("hintsDisabled") == 0;
+
+        PlayerPrefs.SetInt("hintsDisabled", newState ? 1 : 0);
+
+        hintsCheckmark.SetActive(!newState);
     }
 
     public void EnglishButtonClicked()

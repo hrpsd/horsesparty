@@ -148,6 +148,10 @@ MonoBehaviour:
       - Do not link to any social media networks.'
     m_Metadata:
       m_Items: []
+  - m_Id: 79796845105111040
+    m_Localized: EASY MODE
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

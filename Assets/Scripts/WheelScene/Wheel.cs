@@ -63,7 +63,7 @@ public class Wheel : MonoBehaviour
                 physicsFrame = 0;
                 break;
             case SPINNING:
-                rb.angularDrag = 0.5f;
+                rb.angularDamping = 0.5f;
 
                 float speed = 0f;
 
@@ -180,7 +180,7 @@ public class Wheel : MonoBehaviour
         //Debug.Log("rb.rotation=" + rb.rotation + " angle " + currentAngle + " lastSpeeds[" + (physicsFrame % 15) + "] = " + (currentAngle - lastAngle) / Time.fixedDeltaTime + " Time.fixedDeltaTime=" + Time.fixedDeltaTime);
         lastSpeeds[physicsFrame++ % 15] = (currentAngle - lastAngle) / Time.fixedDeltaTime;
 
-        rb.angularDrag *= 1.002f;
+        rb.angularDamping *= 1.002f;
     }
 
     public void LastTrigger(int i)

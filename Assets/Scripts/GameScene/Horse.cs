@@ -58,6 +58,7 @@ public class Horse : MonoBehaviour
     public GameObject[] sparkles;
     public GameObject dontTouch;
 
+    private bool showHints;
 
     static Horse() {
         unicornBackgroundOffsets[BOY,WALK] = new Vector2(0.115f, -0.1f);
@@ -210,6 +211,8 @@ public class Horse : MonoBehaviour
         transform.position = new Vector3(x, y, z);
 
         audioSource = GetComponent<AudioSource>();
+
+        showHints = PlayerPrefs.GetInt("hintsDisabled") == 0;
     }
 
     private void FixedUpdate()
@@ -229,9 +232,9 @@ public class Horse : MonoBehaviour
 
     void Update()
     {
-        /*for (int i = 0; i < sparkles.Length; i++)
+        for (int i = 0; i < sparkles.Length; i++)
         {
-            if (gameManager.gameState == PLAYING && horseState == WALKING && gameManager.IsInvited(this))
+            if (showHints == true && gameManager.gameState == PLAYING && horseState == WALKING && gameManager.IsInvited(this))
             {
                 sparkles[i].transform.localPosition = new Vector3(Mathf.Sin(currentFrame * 0.05f + i * 0.6f) * 0.7f - 0.7f, sparkles[i].transform.localPosition.y, Mathf.Cos(currentFrame * 0.05f + i * 0.6f));
                 sparkles[i].transform.localRotation = Quaternion.Euler(0f, 0f, currentFrame * 2f);
@@ -241,8 +244,8 @@ public class Horse : MonoBehaviour
                 sparkles[i].SetActive(false);
             }
         }
-
-        dontTouch.SetActive(gameManager.gameState == PLAYING && !gameManager.IsInvited(this));*/
+        
+        dontTouch.SetActive(showHints == true && gameManager.gameState == PLAYING && !gameManager.IsInvited(this));
 
         if (gameManager.gameState != STALLED && gameManager.gameState != FADE_OUT)
         {

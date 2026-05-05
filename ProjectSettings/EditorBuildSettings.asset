@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/WheelScene.unity
     guid: aadd29a7c76f74843912a39da25e095f
   m_configObjects:
+    com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 7e8a6b70465de72448fc1825fa963e86, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 65de4e1ae67c342ed9ab587ae15940b9, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: cc982c25fb3b34b9ebbd603fe17039d1, type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 091fb36faf180476691fa41094e4d47f, type: 2}
