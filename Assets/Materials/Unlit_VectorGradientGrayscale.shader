@@ -1,3 +1,5 @@
+// Portions Copyright Sylvain Michel René Nowé 2023-2026
+
 Shader "Unlit/VectorGradientGrayscale"
 {
     Properties

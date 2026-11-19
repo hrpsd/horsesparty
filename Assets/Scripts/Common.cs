@@ -1,3 +1,5 @@
+// Copyright Sylvain Michel René Nowé 2023-2026
+
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.ResourceManagement.AsyncOperations;
