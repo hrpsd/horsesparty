@@ -14,3 +14,12 @@ This led me to the shameful choice of enabling the current character frame GameO
 ## Known Code Issues
 - Use of public fields instead of private serialized fields or properties
 - Use of a static game manager instead of scriptable objects
+
+## License
+
+Copyright (C) 2023-2026 Sylvain Nowé
+
+Horses Party is free software, licensed under the GNU Affero General Public
+License v3.0 or later (see [LICENSE](LICENSE)), with an additional permission
+for the Unity engine. Earlier versions were released under the GPL v3.
+Third-party assets are excluded: see [NOTICE.md](NOTICE.md).
